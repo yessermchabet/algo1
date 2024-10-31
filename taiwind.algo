@@ -1,0 +1,26 @@
+ALGORITHM Checkpoint
+VAR
+    Rania : CHAR;
+    cc, cm, cv : INTEGER := 0;
+BEGIN
+    REPEAT
+        Write("Donnez un char")
+        Read(Rania)
+
+        cc := cc + 1;
+
+        IF (Rania = ' ') THEN
+            cm := cm + 1;
+        END_IF
+
+        IF (Rania = 'a' OR Rania = 'e' OR Rania = 'i' OR Rania = 'u' OR Rania = 'y' OR Rania ='o' OR Rania = 'A' OR Rania = 'E' OR Rania = 'I' OR Rania = 'U' OR Rania = 'Y' OR Rania ='O') THEN
+            cv := cv + 1;
+        END_IF
+
+    UNTIL (Rania = '.')
+
+    Write("Le nombre de char est", cc);
+    Write("Le nombre de mots est",cm + 1)
+    Write("Le nombre de voy est",cv)
+    END
+    
